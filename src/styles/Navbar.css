@@ -1,0 +1,126 @@
+.navbar {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 0 16px;
+  }
+  
+  .nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: none;
+  }
+  
+  .brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-left: 16px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    margin-left: 24px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #666;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 200px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .cart-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 16px;
+    color: #333;
+  }
+  
+  .cart-button:hover {
+    color: #666;
+  }
+  
+  .mobile-menu {
+    display: none;
+  }
+  
+  @media (max-width: 1024px) {
+    .nav-links {
+      display: none;
+    }
+    .menu-button {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-menu {
+      display: block;
+      background-color: white;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      padding: 16px 0;
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 12px;
+      text-align: center;
+      color: #333;
+      text-decoration: none;
+    }
+    .mobile-menu a:hover {
+      background-color: #f5f5f5;
+    }
+  }
+  

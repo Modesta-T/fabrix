@@ -1,0 +1,26 @@
+/* General Layout */
+.app-container {
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+  min-height: 100vh; /* Ensures the main content fills the screen */
+  overflow-y: auto;  /* Allows scrolling */
+  padding-bottom: 100px; /* Prevents footer overlap */
+}
+
+  
+  /* Sections */
+  .products-section {
+    padding: 48px 0;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  

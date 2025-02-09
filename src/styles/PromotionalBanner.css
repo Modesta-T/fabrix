@@ -1,0 +1,47 @@
+.promo-banners {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 48px 0;
+  }
+  
+  @media (min-width: 768px) {
+    .promo-banners {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .promo-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  .promo-banner-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .promo-banner:hover .promo-banner-image {
+    transform: scale(1.05);
+  }
+  
+  .promo-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .promo-banner-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
