@@ -27,7 +27,6 @@ function Navbar({ cartCount }) {
           </div>
           <button className="cart-button">
             <ShoppingCart size={24} />
-            {/* ✅ Ensure the cart count updates dynamically */}
             {cartCount > 0 && <span className="cart-counter">{cartCount}</span>}
           </button>
         </div>

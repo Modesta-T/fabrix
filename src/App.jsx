@@ -11,7 +11,7 @@ import "./styles/App.css";
 function App() {
   const [newProducts, setNewProducts] = useState([]);
   const [specialProducts, setSpecialProducts] = useState([]);
-  const [cartItems, setCartItems] = useState([]); 
+  const [cartItems, setCartItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -36,7 +36,7 @@ function App() {
     fetchProducts();
   }, []);
 
-  // Function to add items to the cart (track quantity)
+  // ✅ Function to add items to cart (track quantity)
   const addToCart = (product) => {
     setCartItems((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
@@ -47,6 +47,11 @@ function App() {
       }
       return [...prevCart, { ...product, quantity: 1 }];
     });
+  };
+
+  // ✅ Function to remove item completely from cart by `id`
+  const removeFromCart = (productId) => {
+    setCartItems((prevCart) => prevCart.filter((item) => item.id !== productId));
   };
 
   return (
@@ -62,12 +67,12 @@ function App() {
         {!loading && !error && (
           <>
             <section className="products-section">
-              <h2>New products</h2>
+              <h2>New Products</h2>
               <ProductGrid products={newProducts} addToCart={addToCart} />
             </section>
 
             <section className="products-section">
-              <h2>Special products</h2>
+              <h2>Special Products</h2>
               <ProductGrid products={specialProducts} addToCart={addToCart} />
             </section>
           </>
@@ -77,7 +82,7 @@ function App() {
         <Testimonials />
       </main>
 
-      <Cart cartItems={cartItems} /> {/* ✅ Ensure Cart receives cartItems */}
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
       <Footer />
     </div>
   );
